@@ -1,0 +1,624 @@
+[[1]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.4645  -0.4645  -0.4241  -0.4241   2.2150  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)   -2.1722     0.3518  -6.174 6.64e-10 ***
+agec>= 70ans  -0.1910     0.5104  -0.374    0.708    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 112.63  on 179  degrees of freedom
+AIC: 116.63
+
+Number of Fisher Scoring iterations: 5
+
+
+[[2]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.5026  -0.5026  -0.4136  -0.4136   2.2367  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.0053     0.4026  -4.981 6.33e-07 ***
+sexH         -0.4106     0.5206  -0.789     0.43    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 112.16  on 179  degrees of freedom
+AIC: 116.16
+
+Number of Fisher Scoring iterations: 5
+
+
+[[3]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.6335  -0.4366  -0.3652  -0.3652   2.3413  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.3026     0.4690  -4.909 9.15e-07 ***
+nbr_af3      -0.3716     0.6310  -0.589    0.556    
+nbr_af4       0.7985     0.7250   1.101    0.271    
+nbr_af5       0.7985     0.9117   0.876    0.381    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 109.30  on 177  degrees of freedom
+AIC: 117.3
+
+Number of Fisher Scoring iterations: 5
+
+
+[[4]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.5106  -0.5106  -0.3694  -0.3694   2.3320  
+
+Coefficients:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)       -2.6509     0.4224  -6.276 3.48e-10 ***
+coteRight Kidney   0.6793     0.5310   1.279    0.201    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 111.06  on 179  degrees of freedom
+AIC: 115.06
+
+Number of Fisher Scoring iterations: 5
+
+
+[[5]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.5287  -0.5287  -0.5287  -0.2697   2.5816  
+
+Coefficients:
+                                  Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                        -1.8971     0.2769  -6.852  7.3e-12 ***
+histoChromophobe                  -16.6689  1809.0545  -0.009    0.993    
+histoPapillaire                    -1.3987     1.0553  -1.325    0.185    
+histoPapillaire cellules claires   -1.1939     1.0593  -1.127    0.260    
+histoTubulo-mucineux fusiforme    -16.6689  4612.2020  -0.004    0.997    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 105.91  on 176  degrees of freedom
+AIC: 115.91
+
+Number of Fisher Scoring iterations: 17
+
+
+[[6]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.6444  -0.5287  -0.5287  -0.2481   2.6444  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)
+(Intercept)   -17.57    1495.30  -0.012    0.991
+gradef2        15.67    1495.30   0.010    0.992
+gradef3        16.10    1495.30   0.011    0.991
+gradefNA       14.10    1495.30   0.009    0.992
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 104.61  on 177  degrees of freedom
+AIC: 112.61
+
+Number of Fisher Scoring iterations: 16
+
+
+[[7]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.5746  -0.4241  -0.4241  -0.3124   2.4676  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.9957     0.7245  -4.135 3.55e-05 ***
+poleMiddle    0.6325     0.8134   0.778    0.437    
+poleUpper     1.2781     0.8327   1.535    0.125    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 109.86  on 178  degrees of freedom
+AIC: 115.86
+
+Number of Fisher Scoring iterations: 5
+
+
+[[8]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.6681  -0.4761  -0.4531  -0.2604   2.6081  
+
+Coefficients:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      -3.3673     1.0171  -3.311 0.000931 ***
+renal_scoref5     0.8023     1.4531   0.552 0.580829    
+renal_scoref6     1.5347     1.1509   1.334 0.182356    
+renal_scoref7     1.2470     1.1865   1.051 0.293256    
+renal_scoref8     1.1427     1.1452   0.998 0.318385    
+renal_scoref9     0.8023     1.2542   0.640 0.522340    
+renal_scoref10    1.9810     1.2882   1.538 0.124099    
+renal_scoref11  -12.1988  1455.3979  -0.008 0.993312    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 108.94  on 173  degrees of freedom
+AIC: 124.94
+
+Number of Fisher Scoring iterations: 14
+
+
+[[9]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.6681  -0.5553  -0.4927  -0.2561   2.6207  
+
+Coefficients:
+                 Estimate Std. Error z value Pr(>|z|)   
+(Intercept)       -3.1781     1.0206  -3.114  0.00185 **
+mrenal_scoref5   -15.3880  1581.9726  -0.010  0.99224   
+mrenal_scoref6     1.6740     1.1607   1.442  0.14924   
+mrenal_scoref7     1.3863     1.1547   1.201  0.22992   
+mrenal_scoref8    -0.2231     1.4405  -0.155  0.87689   
+mrenal_scoref9     1.1304     1.1506   0.982  0.32591   
+mrenal_scoref10    1.1632     1.2682   0.917  0.35906   
+mrenal_scoref11    1.7918     1.5138   1.184  0.23657   
+mrenal_scoref12  -15.3880  6522.6387  -0.002  0.99812   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 103.26  on 172  degrees of freedom
+AIC: 121.26
+
+Number of Fisher Scoring iterations: 17
+
+
+[[10]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.4937  -0.4937  -0.3898  -0.3898   2.2869  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.5390     0.4241  -5.987 2.13e-09 ***
+locationp     0.4959     0.5841   0.849    0.396    
+locationx     0.3989     0.6777   0.589    0.556    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 111.98  on 178  degrees of freedom
+AIC: 117.98
+
+Number of Fisher Scoring iterations: 5
+
+
+[[11]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.5168  -0.5168  -0.3758  -0.3758   2.3176  
+
+Coefficients:
+                 Estimate Std. Error z value Pr(>|z|)
+(Intercept)    -1.657e+01  2.400e+03  -0.007    0.994
+renal_sinusNo   1.395e+01  2.400e+03   0.006    0.995
+renal_sinusyes  7.084e-10  2.683e+03   0.000    1.000
+renal_sinusYes  1.462e+01  2.400e+03   0.006    0.995
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 110.12  on 177  degrees of freedom
+AIC: 118.12
+
+Number of Fisher Scoring iterations: 15
+
+
+[[12]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.7407  -0.4653  -0.3725  -0.3418   2.3906  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -2.93914    0.39935  -7.360 1.84e-13 ***
+volume       0.06116    0.02430   2.517   0.0118 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 105.93  on 179  degrees of freedom
+AIC: 109.93
+
+Number of Fisher Scoring iterations: 5
+
+
+[[13]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.6690  -0.4845  -0.4049  -0.3464   2.4059  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -3.75272    0.86996  -4.314 1.61e-05 ***
+taille_max   0.05386    0.02847   1.892   0.0585 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 109.24  on 179  degrees of freedom
+AIC: 113.24
+
+Number of Fisher Scoring iterations: 5
+
+
+[[14]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.5234  -0.5234  -0.5234  -0.2250   2.7162  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)   -1.9188     0.2677  -7.167 7.66e-13 ***
+vascHyper    -16.6473  1882.9236  -0.009   0.9929    
+vaschypo      -1.7448     1.0475  -1.666   0.0958 .  
+vascHypo     -16.6473  3261.3193  -0.005   0.9959    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 104.99  on 177  degrees of freedom
+AIC: 112.99
+
+Number of Fisher Scoring iterations: 17
+
+
+[[15]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.8203  -0.4246  -0.4246  -0.4246   2.2140  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.3609     0.2701  -8.741   <2e-16 ***
+TT1b          1.4446     0.8792   1.643      0.1    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 110.57  on 179  degrees of freedom
+AIC: 114.57
+
+Number of Fisher Scoring iterations: 5
+
+
+[[16]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.6681  -0.4157  -0.4157  -0.4157   2.2324  
+
+Coefficients:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)       -2.4054     0.3014  -7.980 1.46e-15 ***
+dissectionCO2      1.0191     1.1580   0.880    0.379    
+dissectionSaline   0.4959     0.6147   0.807    0.420    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 111.63  on 178  degrees of freedom
+AIC: 117.63
+
+Number of Fisher Scoring iterations: 5
+
+
+[[17]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.3804  -0.1106  -0.1106  -0.1106   3.1937  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)    2.773      1.031   2.690  0.00715 ** 
+margescoui    -7.866      1.438  -5.469 4.52e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance:  19.80  on 179  degrees of freedom
+AIC: 23.8
+
+Number of Fisher Scoring iterations: 8
+
+
+[[18]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.7585  -0.4353  -0.4353  -0.4353   2.1925  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.3088     0.2621  -8.808   <2e-16 ***
+clavien22-3   1.2102     1.1841   1.022    0.307    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 111.92  on 179  degrees of freedom
+AIC: 115.92
+
+Number of Fisher Scoring iterations: 5
+
+
+[[19]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.6335  -0.4366  -0.3652  -0.3652   2.3413  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.3026     0.4690  -4.909 9.15e-07 ***
+nbr_af3      -0.3716     0.6310  -0.589    0.556    
+nbr_af4       0.7985     0.7250   1.101    0.271    
+nbr_af5       0.7985     0.9117   0.876    0.381    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 109.30  on 177  degrees of freedom
+AIC: 117.3
+
+Number of Fisher Scoring iterations: 5
+
+
+[[20]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.6681  -0.4157  -0.4157  -0.4157   2.2324  
+
+Coefficients:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)       -2.4054     0.3014  -7.980 1.46e-15 ***
+dissectionCO2      1.0191     1.1580   0.880    0.379    
+dissectionSaline   0.4959     0.6147   0.807    0.420    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 111.63  on 178  degrees of freedom
+AIC: 117.63
+
+Number of Fisher Scoring iterations: 5
+
+
+[[21]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.3804  -0.1106  -0.1106  -0.1106   3.1937  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)    2.773      1.031   2.690  0.00715 ** 
+margescoui    -7.866      1.438  -5.469 4.52e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance:  19.80  on 179  degrees of freedom
+AIC: 23.8
+
+Number of Fisher Scoring iterations: 8
+
+
+[[22]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.7585  -0.4353  -0.4353  -0.4353   2.1925  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.3088     0.2621  -8.808   <2e-16 ***
+clavien22-3   1.2102     1.1841   1.022    0.307    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 111.92  on 179  degrees of freedom
+AIC: 115.92
+
+Number of Fisher Scoring iterations: 5
+
+
+[[23]]
+
+Call:
+glm(formula = substitute(recidiven ~ i, list(i = as.name(x))), 
+    family = binomial, data = cryo)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-0.6152  -0.4056  -0.4056  -0.4056   2.2534  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -2.4567     0.3008  -8.168 3.15e-16 ***
+complioui     0.8881     0.5763   1.541    0.123    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 112.77  on 180  degrees of freedom
+Residual deviance: 110.62  on 179  degrees of freedom
+AIC: 114.62
+
+Number of Fisher Scoring iterations: 5
+
+
