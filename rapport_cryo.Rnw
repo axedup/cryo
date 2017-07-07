@@ -1,0 +1,267 @@
+\documentclass[a4paper,11pt] {article}
+\hfuzz=100pt 
+%\documentclass[a4paper,article,oneside,10pt]{memoir}
+\usepackage[francais]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[lucidasmallscale, nofontinfo]{lucimatx}
+%\usepackage{times}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{here}
+\usepackage{ctable}
+\usepackage{pdflscape}
+\usepackage{pst-tree}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{dcolumn}
+\usepackage{Sweave}
+\usepackage{lscape}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{caption}
+%\usepackage[pdftex,bookmarks=true,bookmarksnumbered=true,
+%            hypertexnames=false,breaklinks=true,
+%            linkbordercolor={0 0 1}]{hyperref}
+
+%--------------
+
+%
+%\usepackage{fancyhdr}
+%\pagestyle{empty}
+%\pagestyle{fancy}
+%\fancyhf{}
+%%\renewcommand{\chaptermark}[1]{\markboth{\bsc{\chaptername~\thechapter{} :} #1}{}}
+%%\renewcommand{\sectionmark}[1]{\markright{\thesection{} #1}}
+%%\lfoot{Confidential, for the exclusive use of DMC members}
+%%\renewcommand{\footrulewidth}{0.4pt}
+%%\renewcommand{\headrulewidth}{0.4pt}
+%%\renewcommand{\thepage}{\arabic{\page}}
+%\setcounter{tocdepth}{5} % Dans la table des matieres
+%\setcounter{secnumdepth}{5} % Avec un numero.
+%%\mainmatter
+%\pagenumbering{arabic}\setcounter{page}{1}
+%\rhead{\thepage}
+%\lhead{\leftmark}
+%%\renewcommand{\thesection}{\Roman{section}}
+%%\renewcommand{\thesection}{\Roman{section}}
+%%\renewcommand{\thesection}{\Roman{section}}
+%%\renewcommand{\thesubsection}{\thesection .\Alph{subsection}}
+%
+%--------------
+\begin{document}
+\title{Rapport  d'analyses statistiques}
+\author{Axelle Dupont, sbim, Hôpital Saint Louis, Paris}
+\date\today
+
+%------------------------------------------------------------
+
+
+
+
+
+
+%-------------------------------------------------------------
+
+
+
+
+
+\SweaveOpts{concordance=TRUE}
+
+
+\setkeys{Gin}{width=1\textwidth}
+\maketitle
+
+%\pagestyle{protoc}
+\tableofcontents
+\pagebreak[4]
+\listoftables
+\listoffigures
+%\SweaveOpts{eval=TRUE,echo=false,fig=TRUE}
+
+
+\pagebreak[4]
+%\chapter{Objectif}
+
+
+
+\section{Methodes}
+Cohorte rétrospective.
+Evaluation de la récidive à 6 mois.
+Regression logistique analyses univariée puis bivariées du fait du faible nombre d'évenements. 
+
+
+\pagebreak[4]
+\section{Resultats}
+
+
+
+<<label=tab:pratiq ,echo=FALSE,results=hide>>=
+
+source("C:/Users/adupont/Documents/projetstlouis/scripts/BibliR.R")
+source("C:/Users/adupont/Documents/projetstlouis/cryotherapie/cryo_import.R")
+
+# source("C:/Users/adupont/Documents/projetstlouis/scripts/import.R")
+# source("C:/Users/adupont/Documents/projetstlouis/scripts/descri.R")
+# source("C:/Users/adupont/Documents/projetstlouis/scripts/survie.R")
+#source("C:/Users/adupont/Documents/projetstlouis/scripts/survie_test.R")
+
+@
+
+
+\subsection{Résultats}
+ \Sexpr{nrow(patients_cryo)} patients ont été inclus soit \Sexpr{nrow(cryo)} tumeurs traitées.
+ \subsubsection{Description des patients}
+ 
+<<label=tab:condi ,echo=FALSE,results=tex>>=
+print(xtable (patient_cryo_descri,
+caption= "Caractéristiques des patients ",
+label="tab:condi",
+table.placement="htp",caption.placement="top"),
+tabular.environment="longtable",
+floating=F,
+include.rownames=F,
+ sanitize.text.function = function(x){x}  )
+@
+ \subsubsection{Description des tumeurs}
+<<label=tab:avtg ,echo=FALSE,results=tex>>=
+print(xtable (tumeurs_cryo,
+caption= "Tumeurs",
+label="tab:avtg",
+table.placement="htp",caption.placement="top"),
+tabular.environment="longtable",
+floating=F,
+include.rownames=F,
+ sanitize.text.function = function(x){x}  )
+@
+\pagebreak
+ \subsubsection{Description des traitements}
+<<label=tab:g ,echo=FALSE,results=tex>>=
+print(xtable (tumeurs_cryo_tt,
+caption= "Traitements",
+label="tab:g",
+table.placement="htp",caption.placement="top"),
+tabular.environment="longtable",
+floating=F,
+include.rownames=F,
+ sanitize.text.function = function(x){x}  )
+@
+
+ \subsubsection{Résultats des traitements}
+<<label=tab:gu ,echo=FALSE,results=tex>>=
+print(xtable (tumeurs_cryo_out,
+caption= "Traitements",
+label="tab:gu",
+table.placement="htp",caption.placement="top"),
+tabular.environment="longtable",
+floating=F,
+include.rownames=F,
+ sanitize.text.function = function(x){x}  )
+@
+
+
+ %\subsubsection{Selon les statut échec ou non du traitement}
+<<label=tab:b ,echo=FALSE,results=tex,eval=FALSE>>=
+print(xtable (biv_patients,
+caption= "Traitements",
+label="tab:b",
+table.placement="htp",caption.placement="top"),
+tabular.environment="longtable",
+floating=F,
+include.rownames=F,
+ sanitize.text.function = function(x){x}  )
+@
+
+
+
+\begin{center}
+<<label=fig9822,fig=TRUE,echo=FALSE, include=FALSE>>=
+histog
+@
+\includegraphics[width=0.9\textwidth]{C:/Users/adupont/Documents/projetstlouis/cryotherapie/rapport_cryo-fig9822.pdf}
+
+
+
+
+
+\captionof{figure}{Recurrence and margins}
+
+
+\end{center}
+
+\subsubsection{Analyses univariées}
+
+<<label=tab:u ,echo=FALSE,results=tex>>=
+print(xtable (G2,
+caption= "Analyses univariées",
+label="tab:u",
+table.placement="htp",caption.placement="top"),
+tabular.environment="longtable",
+floating=F,
+include.rownames=F,
+ sanitize.text.function = function(x){x}  )
+@
+
+
+% latex table generated in R 3.3.2 by xtable 1.8-2 package
+% Fri Jun 09 15:56:35 2017
+\begin{longtable}{lll}
+  \hline
+Variable & OR (95\%CI) & \emph{P (Wald)} \\ 
+  \hline
+Age & \Sexpr{or.calc2(age)[1]} (\Sexpr{or.calc2(age)[2]}--\Sexpr{or.calc2(age)[3]}) & \Sexpr{or.calc2(age)[4]} \\ 
+  Sexe &  &  \\ 
+  \quad F & 1 &  \\ 
+  \quad H & \Sexpr{or.calc2(sexe)[1]} (\Sexpr{or.calc2(sexe)[2]}--\Sexpr{or.calc2(sexe)[3]}) & \Sexpr{or.calc2(sexe)[4]}\\ 
+  Cote &  &  \\ 
+  \quad Left Kidney & 1 &  \\ 
+  \quad Right Kidney & \Sexpr{or.calc2(cote)[1]} (\Sexpr{or.calc2(cote)[2]}--\Sexpr{or.calc2(cote)[3]}) & \Sexpr{or.calc2(cote)[4]} \\ 
+renal score & \Sexpr{or.calc2(renal_score)[1]} (\Sexpr{or.calc2(renal_score)[2]}--\Sexpr{or.calc2(renal_score)[3]}) & \Sexpr{or.calc2(renal_score)[4]} \\
+ mrenal score & \Sexpr{or.calc2(mrenal_score)[1]} (\Sexpr{or.calc2(mrenal_score)[2]}--\Sexpr{or.calc2(mrenal_score)[3]}) & \Sexpr{or.calc2(mrenal_score)[4]} \\
+ 
+ 
+ 
+  Histo &  &  \\ 
+  \quad CCR & 1 &  \\ 
+  \quad Non-CCR & \Sexpr{or.calc2(histo)[1]} (\Sexpr{or.calc2(histo)[2]}--\Sexpr{or.calc2(histo)[3]}) & \Sexpr{or.calc2(histo)[4]} \\ 
+
+  renal sinus &  &  \\ 
+  \quad No & 1 &  \\ 
+  \quad Yes & \Sexpr{or.calc2(renal)[1]} (\Sexpr{or.calc2(renal)[2]}--\Sexpr{or.calc2(renal)[3]}) & \Sexpr{or.calc2(renal)[4]} \\ 
+
+Volume & \Sexpr{or.calc2(volume)[1]} (\Sexpr{or.calc2(volume)[2]}--\Sexpr{or.calc2(volume)[3]}) & \Sexpr{or.calc2(volume)[4]} \\
+
+Taille & \Sexpr{or.calc2(taille)[1]} (\Sexpr{or.calc2(taille)[2]}--\Sexpr{or.calc2(taille)[3]}) & \Sexpr{or.calc2(taille)[4]} \\
+  Hyper ou hypovasculaire
+          &  &  \\ 
+  \quad Hyper & 1 &  \\ 
+  \quad Hypo & \Sexpr{or.calc2(vasc)[1]} (\Sexpr{or.calc2(vasc)[2]}--\Sexpr{or.calc2(vasc)[3]}) & \Sexpr{or.calc2(vasc)[4]} \\ 
+  T &  &  \\ 
+  \quad T1a & 1 &  \\ 
+  \quad T1b & \Sexpr{or.calc2(T)[1]} (\Sexpr{or.calc2(T)[2]}--\Sexpr{or.calc2(T)[3]}) & \Sexpr{or.calc2(T)[4]} \\ 
+
+  Nombre aiguilles &  &  \\ 
+  \quad < 3 & 1 &  \\ 
+  \quad >= 3 & \Sexpr{or.calc2(aig)[1]} (\Sexpr{or.calc2(aig)[2]}--\Sexpr{or.calc2(aig)[3]}) & \Sexpr{or.calc2(aig)[4]} \\ 
+  Dissection &  &  \\ 
+  \quad non & 1 &  \\ 
+  \quad oui & \Sexpr{or.calc2(diss)[1]} (\Sexpr{or.calc2(diss)[2]}--\Sexpr{or.calc2(diss)[3]}) & \Sexpr{or.calc2(diss)[4]} \\ 
+
+  Clavien &  &  \\ 
+  \quad 0-1 & 1 &  \\ 
+  \quad 2-3 & \Sexpr{or.calc2(clavien)[1]} (\Sexpr{or.calc2(clavien)[2]}--\Sexpr{or.calc2(clavien)[3]}) & \Sexpr{or.calc2(clavien)[4]} \\ 
+
+\hline
+\caption{Analyses bivariées} 
+\label{tab:uo}
+\end{longtable}
+
+
+
+
+
+
+
+\end{document}
